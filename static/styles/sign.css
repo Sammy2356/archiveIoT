@@ -1,0 +1,444 @@
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Medium.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  font-family: "Roobert", sans-serif;
+}
+
+* a {
+  color: #4ea7ec;
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  body main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+body main #inlogo {
+  display: none;
+  background: #70bdf9;
+}
+
+@media screen and (max-width: 768px) {
+  body main #inlogo {
+    display: block;
+    margin-bottom: 30px;
+  }
+  body main #inlogo svg {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main #inlogo {
+    margin-bottom: 20px;
+  }
+  body main #inlogo svg {
+    width: 120px;
+  }
+}
+
+body main section:first-child {
+  background: url("../images/sign-bg.jpg") center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:first-child {
+    display: none;
+  }
+}
+
+body main section:first-child #logo {
+  position: absolute;
+  left: 8%;
+  top: 35px;
+}
+
+body main section:first-child .overflow {
+  background: rgba(3, 20, 32, 0.7);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section:first-child .overflow #bg-tag {
+  width: 80%;
+}
+
+body main section:first-child .overflow #bg-tag h2,
+body main section:first-child .overflow #bg-tag p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+body main section:first-child .overflow #bg-tag h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1350px) {
+  body main section:first-child .overflow #bg-tag h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body main section:first-child .overflow #bg-tag h2 {
+    font-size: 1.82rem;
+  }
+}
+
+body main section:first-child .overflow #bg-tag p {
+  font-size: 14px;
+  font-weight: 300;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  body main section:first-child .overflow #bg-tag p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body main section:first-child .overflow #bg-tag p {
+    font-size: 13px;
+  }
+}
+
+body main section:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 4%;
+}
+
+body main section:last-child header,
+body main section:last-child form {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+body main section:last-child footer {
+  display: block;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:last-child footer {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main section:last-child footer {
+    margin-top: 10px;
+  }
+}
+
+body main section:last-child footer * {
+  font-weight: 300;
+}
+
+body main section:last-child footer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:last-child footer p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main section:last-child footer p {
+    font-size: 10px;
+  }
+}
+
+body main section:last-child header {
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:last-child header {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main section:last-child header {
+    margin-bottom: 20px;
+  }
+}
+
+body main section:last-child header h1,
+body main section:last-child header p {
+  padding: 0;
+  margin: 0;
+}
+
+body main section:last-child header h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:last-child header h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body main section:last-child header h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main section:last-child header h1 {
+    font-size: 18px;
+  }
+}
+
+body main section:last-child header p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  body main section:last-child header p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body main section:last-child header p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main section:last-child header p {
+    font-size: 10px;
+  }
+}
+
+body main #btnback {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  body main #btnback {
+    margin-top: 30px;
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main #btnback {
+    margin-top: 20px;
+    gap: 3px;
+  }
+}
+
+body main #btnback span {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  body main #btnback span {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main #btnback span {
+    font-size: 11px;
+  }
+}
+
+body main #btnback svg {
+  width: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  body main #btnback svg {
+    width: 19px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main #btnback svg {
+    width: 14px;
+  }
+}
+
+body main .formControl {
+  padding: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  body main .formControl {
+    padding: 3px 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main .formControl {
+    padding: 2px 0;
+  }
+}
+
+body main .formControl input {
+  border: 1px solid #ccc;
+  outline: none;
+  width: calc(100% - 28px);
+  font-size: 14px;
+  padding: 12px 14px;
+  font-weight: 300;
+  border-radius: 12px;
+  -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  body main .formControl input {
+    padding: 9px 12px;
+    font-size: 12px;
+    border-radius: 9px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main .formControl input {
+    padding: 6px 9px;
+    font-size: 10px;
+    border-radius: 7px;
+    width: calc(100% - 18px);
+  }
+}
+
+body main .formControl input:focus {
+  border-color: #4ea7ec;
+}
+
+body main .formControl button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #4ea7ec;
+  border-radius: 40px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  body main .formControl button {
+    padding: 9px 0;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body main .formControl button {
+    padding: 6px 0;
+    font-size: 11px;
+  }
+}
+
+body main .formControl button:hover {
+  background-color: #3571a0;
+}
+/*# sourceMappingURL=sign.css.map */

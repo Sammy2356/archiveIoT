@@ -1,0 +1,545 @@
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300; // Light
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400; // Normal
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Medium.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500; // Medium
+}
+
+//   @font-face {
+//     font-family: 'Roobert';
+//     src: url(./assets/fonts/Roobert/Roobert-SemiBold.woff2) format('woff2');
+//     font-style: normal;
+//     font-weight: 600; // Semibold
+//   }
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700; // Bold
+}
+
+@import "./mixin";
+
+$primaryColor: #3571a0;
+$defaultColor: #70bdf9;
+$try: #4ea7ec;
+
+$aColor: #333;
+$borderColor: #d6dfe5;
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roobert", sans-serif;
+
+  a {
+    color: $try;
+    text-decoration: none;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+
+  .container {
+    margin: 0;
+    padding: 0;
+
+    header {
+      position: relative;
+      & > img {
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        max-height: 600px;
+
+        @include phone() {
+          max-height: 400px;
+        }
+      }
+
+      .overlay {
+        height: 80vh;
+        max-height: 600px;
+        background: rgba($color: $aColor, $alpha: 0.58);
+        box-shadow: 0px 0px 60px 60px inset rgba($color: $aColor, $alpha: 0.98);
+        @include phone() {
+          max-height: 400px;
+        }
+        nav {
+          display: flex;
+          justify-content: space-between;
+          padding: 30px 10%;
+          align-items: center;
+
+          @include tablet() {
+            padding: 24px 8%;
+          }
+          @include phone() {
+            padding: 20px 7%;
+          }
+          @include semiPhone() {
+            padding: 18px 6%;
+          }
+          @include smallPhone() {
+            padding: 17px 4%;
+          }
+
+          a {
+            width: 200px;
+            display: block;
+
+            @include phone() {
+              width: 140px;
+            }
+
+            @include smallPhone() {
+              width: 110px;
+            }
+            svg {
+              width: 100%;
+            }
+
+            &:last-child {
+              background-color: $primaryColor;
+              color: #fff;
+              font-size: 17px;
+              font-weight: 300;
+              width: fit-content;
+              padding: 10px 20px;
+              border-radius: 4px;
+
+              @include phone() {
+                padding: 8px 14px;
+                font-size: 16px;
+              }
+              @include semiPhone() {
+                padding: 6px 12px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 50vh;
+          max-height: 450px;
+
+          @include phone() {
+            min-height: 30vh;
+            max-height: 300px;
+          }
+
+          h1 {
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            font-size: 3rem;
+            text-align: center;
+            max-width: 900px;
+            width: 90%;
+
+            @include semiTablet() {
+              font-size: 2.4rem;
+            }
+
+            @include phone() {
+              font-size: 1.8rem;
+            }
+
+            @include semiPhone() {
+              font-size: 1.5rem;
+            }
+          }
+          p {
+            padding: 0;
+            margin: 10px 0;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 300;
+            text-align: center;
+            width: 90%;
+            max-width: 900px;
+
+            @include semiTablet() {
+              font-size: 22px;
+            }
+
+            @include phone() {
+              font-size: 18px;
+            }
+
+            @include semiPhone() {
+              font-size: 16px;
+            }
+          }
+          a {
+            background-color: $primaryColor;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 300;
+            width: fit-content;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            @include phone() {
+              padding: 8px 14px;
+              font-size: 16px;
+              margin-top: 20px;
+            }
+            @include semiPhone() {
+              padding: 6px 12px;
+              font-size: 14px;
+            }
+
+            &:hover {
+              background-color: #265171;
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      padding: 80px 8%;
+
+      @include mobile() {
+        padding: 70px 6%;
+      }
+
+      @include phone() {
+        padding: 40px 4%;
+      }
+
+      @include smallPhone() {
+        padding: 25px 2%;
+      }
+
+      h2 {
+        font-size: 34px;
+        font-weight: 500;
+
+        @include tablet() {
+          font-size: 30px;
+        }
+        @include phone() {
+          font-size: 24px;
+        }
+        @include smallPhone() {
+          font-size: 18px;
+        }
+      }
+    }
+
+    #why_choose_us {
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        @include phone() {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        li {
+          list-style-type: none;
+          strong,
+          p {
+            color: $aColor;
+            line-height: 150%;
+          }
+
+          strong {
+            font-weight: 500;
+            font-size: 24px;
+
+            @include phone() {
+              font-size: 20px;
+            }
+
+            @include semiPhone() {
+              font-size: 16px;
+            }
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 18px;
+            @include phone() {
+              font-size: 16px;
+            }
+
+            @include semiPhone() {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    #about {
+      background-color: $aColor;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      p {
+        color: #fff;
+        font-size: 23px;
+        line-height: 160%;
+        width: 96%;
+        max-width: 1000px;
+        margin: inherit auto;
+        font-weight: 300;
+        text-align: center;
+
+        @include semiTablet() {
+          font-size: 22px;
+        }
+
+        @include phone() {
+          font-size: 20px;
+        }
+
+        @include semiPhone() {
+          font-size: 18px;
+        }
+
+        @include smallPhone() {
+          font-size: 15px;
+        }
+      }
+    }
+
+    #features {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        gap: 15px;
+
+        @include mobile() {
+          gap: 10px;
+        }
+
+        @include semiPhone() {
+          gap: 6px;
+        }
+        li {
+          list-style-type: none;
+          background: rgba($color: $try, $alpha: 0.38);
+          padding: 20px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 150%;
+          color: $aColor;
+          strong {
+            display: block;
+            line-height: 150%;
+            font-size: 19px;
+            color: $aColor;
+            font-weight: 500;
+          }
+
+          @include semiTablet() {
+            font-size: 16px;
+            padding: 18px;
+            strong {
+              font-size: 19px;
+            }
+          }
+          @include phone() {
+            font-size: 14px;
+            padding: 15px;
+            strong {
+              font-size: 17px;
+            }
+          }
+          @include semiPhone() {
+            font-size: 13px;
+            strong {
+              font-size: 16px;
+            }
+          }
+          @include smallPhone() {
+            font-size: 12px;
+            padding: 12px;
+            strong {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    #faq {
+      background-color: rgba($color: $try, $alpha: 0.1);
+      h2 {
+        text-align: center;
+      }
+      ul {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 860px;
+        li {
+          list-style-type: none;
+          background-color: rgba($color: #000, $alpha: 0.8);
+          margin-bottom: 6px;
+          border-radius: 8px;
+          overflow: hidden;
+          strong {
+            font-weight: 400;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            border-bottom: 2px solid rgba($color: $borderColor, $alpha: 0.28);
+
+            @include semiTablet() {
+              font-size: 19px;
+              padding: 19px;
+            }
+            @include phone() {
+              font-size: 18px;
+              padding: 16px;
+            }
+            @include semiPhone() {
+              font-size: 16px;
+            }
+            @include smallPhone() {
+              font-size: 14px;
+              padding: 13px;
+            }
+          }
+
+          p {
+            display: none;
+            color: #fff;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 150%;
+            padding: 20px;
+            margin: 0;
+
+            @include semiTablet() {
+              font-size: 17px;
+              padding: 19px;
+            }
+            @include phone() {
+              font-size: 16px;
+              padding: 16px;
+            }
+            @include semiPhone() {
+              font-size: 14px;
+            }
+            @include smallPhone() {
+              font-size: 12px;
+              padding: 13px;
+            }
+          }
+
+          .show-p {
+            display: block;
+          }
+        }
+      }
+    }
+
+    footer {
+      background: $aColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 8% 0 8%;
+
+      @include mobile() {
+        padding: 70px 6% 0 6%;
+      }
+
+      @include phone() {
+        padding: 40px 4% 0 4%;
+      }
+
+      @include smallPhone() {
+        padding: 25px 2% 0 2%;
+      }
+
+      svg {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include semiTablet() {
+          max-width: 300px;
+        }
+
+        @include phone() {
+          max-width: 260px;
+        }
+
+        @include semiPhone() {
+          max-width: 160px;
+        }
+      }
+
+      div {
+        text-align: center;
+        padding: 30px 0;
+        font-size: 2rem;
+        font-weight: 300;
+        color: $primaryColor;
+
+        @include phone() {
+          font-size: 1.52rem;
+          padding: 20px 0;
+        }
+
+        @include semiPhone() {
+          font-size: 1.2rem;
+        }
+
+        @include smallPhone() {
+          font-size: 0.9rem;
+          padding: 13px 0;
+        }
+      }
+    }
+  }
+}

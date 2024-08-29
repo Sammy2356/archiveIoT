@@ -1,0 +1,722 @@
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Medium.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  font-family: "Roobert", sans-serif;
+}
+
+* a {
+  color: #4ea7ec;
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body .container {
+  margin: 0;
+  padding: 0;
+}
+
+body .container header {
+  position: relative;
+}
+
+body .container header > img {
+  height: 80vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  max-height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container header > img {
+    max-height: 400px;
+  }
+}
+
+body .container header .overlay {
+  height: 80vh;
+  max-height: 600px;
+  background: rgba(51, 51, 51, 0.58);
+  -webkit-box-shadow: 0px 0px 60px 60px inset rgba(51, 51, 51, 0.98);
+          box-shadow: 0px 0px 60px 60px inset rgba(51, 51, 51, 0.98);
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay {
+    max-height: 400px;
+  }
+}
+
+body .container header .overlay nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  body .container header .overlay nav {
+    padding: 24px 8%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay nav {
+    padding: 20px 7%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container header .overlay nav {
+    padding: 18px 6%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container header .overlay nav {
+    padding: 17px 4%;
+  }
+}
+
+body .container header .overlay nav a {
+  width: 200px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay nav a {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container header .overlay nav a {
+    width: 110px;
+  }
+}
+
+body .container header .overlay nav a svg {
+  width: 100%;
+}
+
+body .container header .overlay nav a:last-child {
+  background-color: #3571a0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay nav a:last-child {
+    padding: 8px 14px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container header .overlay nav a:last-child {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+body .container header .overlay section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50vh;
+  max-height: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay section {
+    min-height: 30vh;
+    max-height: 300px;
+  }
+}
+
+body .container header .overlay section h1 {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  max-width: 900px;
+  width: 90%;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container header .overlay section h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container header .overlay section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+body .container header .overlay section p {
+  padding: 0;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container header .overlay section p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay section p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container header .overlay section p {
+    font-size: 16px;
+  }
+}
+
+body .container header .overlay section a {
+  background-color: #3571a0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 30px;
+  -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (max-width: 768px) {
+  body .container header .overlay section a {
+    padding: 8px 14px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container header .overlay section a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+body .container header .overlay section a:hover {
+  background-color: #265171;
+}
+
+body .container section {
+  padding: 80px 8%;
+}
+
+@media screen and (max-width: 980px) {
+  body .container section {
+    padding: 70px 6%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container section {
+    padding: 40px 4%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container section {
+    padding: 25px 2%;
+  }
+}
+
+body .container section h2 {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  body .container section h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container section h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container section h2 {
+    font-size: 18px;
+  }
+}
+
+body .container #why_choose_us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+body .container #why_choose_us ul {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container #why_choose_us ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+
+body .container #why_choose_us ul li {
+  list-style-type: none;
+}
+
+body .container #why_choose_us ul li strong,
+body .container #why_choose_us ul li p {
+  color: #333;
+  line-height: 150%;
+}
+
+body .container #why_choose_us ul li strong {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container #why_choose_us ul li strong {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #why_choose_us ul li strong {
+    font-size: 16px;
+  }
+}
+
+body .container #why_choose_us ul li p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  body .container #why_choose_us ul li p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #why_choose_us ul li p {
+    font-size: 13px;
+  }
+}
+
+body .container #about {
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container #about p {
+  color: #fff;
+  font-size: 23px;
+  line-height: 160%;
+  width: 96%;
+  max-width: 1000px;
+  margin: inherit auto;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container #about p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container #about p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #about p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container #about p {
+    font-size: 15px;
+  }
+}
+
+body .container #features ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+@media screen and (max-width: 980px) {
+  body .container #features ul {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #features ul {
+    gap: 6px;
+  }
+}
+
+body .container #features ul li {
+  list-style-type: none;
+  background: rgba(78, 167, 236, 0.38);
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  color: #333;
+}
+
+body .container #features ul li strong {
+  display: block;
+  line-height: 150%;
+  font-size: 19px;
+  color: #333;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container #features ul li {
+    font-size: 16px;
+    padding: 18px;
+  }
+  body .container #features ul li strong {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container #features ul li {
+    font-size: 14px;
+    padding: 15px;
+  }
+  body .container #features ul li strong {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #features ul li {
+    font-size: 13px;
+  }
+  body .container #features ul li strong {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container #features ul li {
+    font-size: 12px;
+    padding: 12px;
+  }
+  body .container #features ul li strong {
+    font-size: 15px;
+  }
+}
+
+body .container #faq {
+  background-color: rgba(78, 167, 236, 0.1);
+}
+
+body .container #faq h2 {
+  text-align: center;
+}
+
+body .container #faq ul {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 860px;
+}
+
+body .container #faq ul li {
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 6px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body .container #faq ul li strong {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 2px solid rgba(214, 223, 229, 0.28);
+}
+
+@media screen and (max-width: 1100px) {
+  body .container #faq ul li strong {
+    font-size: 19px;
+    padding: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container #faq ul li strong {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #faq ul li strong {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container #faq ul li strong {
+    font-size: 14px;
+    padding: 13px;
+  }
+}
+
+body .container #faq ul li p {
+  display: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 20px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container #faq ul li p {
+    font-size: 17px;
+    padding: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container #faq ul li p {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container #faq ul li p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container #faq ul li p {
+    font-size: 12px;
+    padding: 13px;
+  }
+}
+
+body .container #faq ul li .show-p {
+  display: block;
+}
+
+body .container footer {
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 8% 0 8%;
+}
+
+@media screen and (max-width: 980px) {
+  body .container footer {
+    padding: 70px 6% 0 6%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container footer {
+    padding: 40px 4% 0 4%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container footer {
+    padding: 25px 2% 0 2%;
+  }
+}
+
+body .container footer svg {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+  body .container footer svg {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container footer svg {
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container footer svg {
+    max-width: 160px;
+  }
+}
+
+body .container footer div {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #3571a0;
+}
+
+@media screen and (max-width: 768px) {
+  body .container footer div {
+    font-size: 1.52rem;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body .container footer div {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container footer div {
+    font-size: 0.9rem;
+    padding: 13px 0;
+  }
+}
+/*# sourceMappingURL=home.css.map */

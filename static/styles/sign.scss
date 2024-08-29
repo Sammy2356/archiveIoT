@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300; // Light
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400; // Normal
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Medium.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500; // Medium
+}
+
+//   @font-face {
+//     font-family: 'Roobert';
+//     src: url(./assets/fonts/Roobert/Roobert-SemiBold.woff2) format('woff2');
+//     font-style: normal;
+//     font-weight: 600; // Semibold
+//   }
+
+@font-face {
+  font-family: "Roobert";
+  src: url(./RoobertPRO-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700; // Bold
+}
+
+@import "./mixin";
+
+$primaryColor: #3571a0;
+$defaultColor: #70bdf9;
+$try: #4ea7ec;
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roobert", sans-serif;
+
+  a {
+    color: $try;
+    text-decoration: none;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+
+    @include phone() {
+      grid-template-columns: 1fr;
+    }
+
+    #inlogo {
+      display: none;
+      background: #70bdf9;
+      @include phone() {
+        display: block;
+        margin-bottom: 30px;
+
+        svg {
+          width: 150px;
+        }
+      }
+
+      @include smallPhone() {
+        margin-bottom: 20px;
+        svg {
+          width: 120px;
+        }
+      }
+    }
+
+    section {
+      &:first-child {
+        background: url("../images/sign-bg.jpg") center center;
+        background-size: cover;
+
+        @include phone() {
+          display: none;
+        }
+
+        #logo {
+          position: absolute;
+          left: 8%;
+          top: 35px;
+        }
+
+        .overflow {
+          background: rgba($color: #031420, $alpha: 0.7);
+          position: relative;
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          #bg-tag {
+            width: 80%;
+
+            h2,
+            p {
+              text-align: center;
+              padding: 0;
+              margin: 0;
+              color: #fff;
+            }
+            h2 {
+              font-size: 2.7rem;
+              font-weight: 500;
+
+              @include bigTablet() {
+                font-size: 2.2rem;
+              }
+
+              @include mobile() {
+                font-size: 1.82rem;
+              }
+            }
+            p {
+              font-size: 14px;
+              font-weight: 300;
+              width: 70%;
+              margin: 0 auto;
+              @include tablet() {
+                width: 80%;
+              }
+
+              @include mobile() {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 4%;
+        header,
+        form {
+          width: 100%;
+          max-width: 380px;
+          text-align: center;
+        }
+
+        footer {
+          display: block;
+          margin-top: 30px;
+          width: 100%;
+          max-width: 400px;
+
+          @include phone() {
+            margin-top: 20px;
+          }
+          @include smallPhone() {
+            margin-top: 10px;
+          }
+
+          * {
+            font-weight: 300;
+          }
+
+          p {
+            text-align: center;
+            font-size: 14px;
+
+            @include phone() {
+              font-size: 12px;
+            }
+            @include smallPhone() {
+              font-size: 10px;
+            }
+          }
+        }
+
+        header {
+          margin-bottom: 40px;
+          max-width: 450px;
+
+          @include phone() {
+            margin-bottom: 30px;
+          }
+
+          @include smallPhone() {
+            margin-bottom: 20px;
+          }
+
+          h1,
+          p {
+            padding: 0;
+            margin: 0;
+          }
+          h1 {
+            font-size: 30px;
+            font-weight: 500;
+
+            @include phone() {
+              font-size: 24px;
+            }
+
+            @include semiPhone() {
+              font-size: 24px;
+            }
+
+            @include smallPhone() {
+              font-size: 18px;
+            }
+          }
+          p {
+            font-size: 14px;
+            font-weight: 300;
+            @include phone() {
+              font-size: 13px;
+            }
+
+            @include semiPhone() {
+              font-size: 11px;
+            }
+
+            @include smallPhone() {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    #btnback {
+      width: 100%;
+      max-width: 350px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      @include phone() {
+        margin-top: 30px;
+        gap: 4px;
+      }
+
+      @include smallPhone() {
+        margin-top: 20px;
+        gap: 3px;
+      }
+
+      span {
+        font-weight: 300;
+        font-size: 15px;
+
+        @include phone() {
+          font-size: 13px;
+        }
+
+        @include smallPhone() {
+          font-size: 11px;
+        }
+      }
+
+      svg {
+        width: 24px;
+
+        @include phone() {
+          width: 19px;
+        }
+
+        @include smallPhone() {
+          width: 14px;
+        }
+      }
+    }
+
+    .formControl {
+      padding: 4px 0;
+      @include phone() {
+        padding: 3px 0;
+      }
+      @include smallPhone() {
+        padding: 2px 0;
+      }
+      input {
+        border: 1px solid #ccc;
+        outline: none;
+        width: calc(100% - 28px);
+        font-size: 14px;
+        padding: 12px 14px;
+        font-weight: 300;
+        border-radius: 12px;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-weight: 300;
+
+        @include phone() {
+          padding: 9px 12px;
+          font-size: 12px;
+          border-radius: 9px;
+          width: calc(100% - 24px);
+        }
+
+        @include smallPhone() {
+          padding: 6px 9px;
+          font-size: 10px;
+          border-radius: 7px;
+          width: calc(100% - 18px);
+        }
+
+        &:focus {
+          border-color: $try;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: $try;
+        border-radius: 40px;
+        font-size: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-weight: 300;
+
+        @include phone() {
+          padding: 9px 0;
+          font-size: 13px;
+        }
+
+        @include smallPhone() {
+          padding: 6px 0;
+          font-size: 11px;
+        }
+
+        &:hover {
+          background-color: $primaryColor;
+        }
+      }
+    }
+  }
+}
